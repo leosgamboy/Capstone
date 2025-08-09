@@ -1,0 +1,27 @@
+REAL BOND YIELD DATA MERGE SUMMARY
+============================================================
+
+Generated on: 2025-07-29 20:34:55.295230
+Total records: 559,847
+Date range: 1677-12-31 00:00:00 to 2025-07-22 00:00:00
+Countries: 73
+Data sources: 76
+
+COUNTRY SUMMARY:
+------------------------------
+               yield_rate                           
+                    count   mean   std    min    max
+Country                                             
+Argentina            1716  11.70  8.21   1.13  49.69
+Armenia              2992  11.03  2.15   7.61  16.17
+Australia           12721   6.15  3.96  -0.89  16.50
+Austria             14012   4.89  2.80  -0.47  18.00
+Bangladesh           2342   8.32  2.02   5.40  13.00
+...                   ...    ...   ...    ...    ...
+Uganda               3297  15.85  1.31  10.90  19.50
+United Kingdom      26164   5.74  3.60  -2.12  17.39
+United States       18039   5.66  2.93   0.52  24.62
+Vietnam              3880   6.13  3.32   1.62  13.08
+Zambia               3263  23.81  6.31  14.00  38.00
+
+[73 rows x 5 columns]

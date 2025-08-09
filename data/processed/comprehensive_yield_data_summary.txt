@@ -1,0 +1,84 @@
+COMPREHENSIVE YIELD DATA SUMMARY
+==================================================
+
+Generated on: 2025-07-29 20:30:56.466355
+Total records: 311,053
+Countries: 73
+Regions: 7
+Date range: 1990-01-01 00:00:00 to 2024-12-31 00:00:00
+
+COUNTRY LIST:
+---------------
+• Andorra
+• Argentina
+• Armenia
+• Australia
+• Austria
+• Bangladesh
+• Belgium
+• Botswana
+• Brazil
+• Bulgaria
+• Canada
+• Chile
+• China
+• Colombia
+• Croatia
+• Cyprus
+• Czech Republic
+• Denmark
+• Egypt
+• Finland
+• France
+• Germany
+• Greece
+• Hong Kong
+• Hungary
+• Iceland
+• India
+• Indonesia
+• Ireland
+• Israel
+• Italy
+• Japan
+• Kenya
+• Latvia
+• Liechtenstein
+• Lithuania
+• Luxembourg
+• Malaysia
+• Malta
+• Mexico
+• Monaco
+• Namibia
+• Netherlands
+• New Zealand
+• Norway
+• Pakistan
+• Peru
+• Philippines
+• Poland
+• Portugal
+• Qatar
+• Romania
+• Russia
+• San Marino
+• Serbia
+• Singapore
+• Slovakia
+• Slovenia
+• South Africa
+• South Korea
+• Spain
+• Sri Lanka
+• Sweden
+• Switzerland
+• Taiwan
+• Thailand
+• Turkey
+• Uganda
+• United Kingdom
+• United States
+• Vatican City
+• Vietnam
+• Zambia

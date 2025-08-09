@@ -1,0 +1,27 @@
+BOND YIELD DATA ANALYSIS REPORT
+==================================================
+Generated on: 2025-07-29 20:17:19.377674
+Data period: 1786-07-31 00:00:00 to 2025-12-06 00:00:00
+Total observations: 31,919
+
+COUNTRY SUMMARY:
+--------------------
+               count   mean    std    min     max  median
+Country                                                  
+France          8694  6.136  5.905 -0.400  50.000   4.908
+Japan           5260  3.445  3.030 -0.284  10.670   1.810
+United States  17965  5.667  2.935  0.520  24.615   5.120
+
+RECENT PERIOD SUMMARY (2015-2025):
+----------------------------------------
+               count   mean    std    min    max
+Country                                         
+France          1093  1.154  1.206 -0.400  3.589
+Japan           1088  0.255  0.391 -0.284  1.551
+United States   2636  2.579  1.111  0.520  4.980
+
+KEY INSIGHTS:
+---------------
+Highest yield: 50.00% (France, 1798-11-12)
+Lowest yield: -0.40% (France, 2019-03-09)
+Most volatile country: France (std dev: 5.905)
