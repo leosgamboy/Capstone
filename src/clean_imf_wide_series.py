@@ -9,8 +9,8 @@ DATA_DIR = "/Users/leosgambato/Documents/GitHub/Capstone/data/external/Data/Cont
 OUTPUT_DIR = "/Users/leosgambato/Documents/GitHub/Capstone/data/processed"
 
 
-def get_allowed_iso3_from_cpi(cpi_path: str) -> List[str]:
-    df = pd.read_csv(cpi_path)
+def get_allowed_iso3_from_sovereign_yields(sovereign_yields_path: str) -> List[str]:
+    df = pd.read_csv(sovereign_yields_path)
     iso3 = sorted(df["iso3"].unique())
     return iso3
 
@@ -41,8 +41,8 @@ def clean_wide_file(input_path: str, value_var_name: str, output_filename: str, 
         raise RuntimeError(f"SERIES_CODE column not found in {input_path}")
     df["iso3"] = df["SERIES_CODE"].astype(str).str.split(".").str[0].str.upper()
 
-    # Restrict to the CPI country coverage
-    allowed_iso3 = set(get_allowed_iso3_from_cpi(os.path.join(OUTPUT_DIR, "cpi_cleaned.csv")))
+    # Restrict to the sovereign yields country coverage
+    allowed_iso3 = set(get_allowed_iso3_from_sovereign_yields(os.path.join(OUTPUT_DIR, "sovereign_yields_monthly.csv")))
     df = df[df["iso3"].isin(allowed_iso3)].copy()
 
     # Melt to long format

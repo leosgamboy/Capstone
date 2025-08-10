@@ -41,63 +41,57 @@ class ComprehensiveWGIIntegrator:
             print(f"  ✅ Loaded {len(wgi_data):,} rows from WGI file")
             print(f"  📋 Columns: {list(wgi_data.columns)}")
             
-            # Examine structure and find relevant columns
-            country_col = None
-            year_col = None
-            indicator_cols = {}
-            
-            # Find country code column
-            for col in wgi_data.columns:
-                if 'code' in col.lower() or 'country' in col.lower():
-                    country_col = col
-                    break
-            
-            # Find year column
-            for col in wgi_data.columns:
-                if 'year' in col.lower():
-                    year_col = col
-                    break
-            
-            # Find indicator columns
-            for code, full_name in self.indicators.items():
-                for col in wgi_data.columns:
-                    if code.lower() in col.lower() and 'estimate' in col.lower():
-                        indicator_cols[code] = col
-                        break
-            
-            print(f"  🌍 Country column: {country_col}")
-            print(f"  📅 Year column: {year_col}")
-            print(f"  📈 Indicator columns: {indicator_cols}")
-            
-            if not country_col or not year_col:
-                print("  ❌ Could not find country or year columns")
-                return None
+            # The data is in long format: each row is country-year-indicator
+            print(f"  🔍 Data structure: {wgi_data['indicator'].unique()} indicators")
+            print(f"  🌍 Sample countries: {wgi_data['countryname'].unique()[:10]}")
+            print(f"  📅 Year range: {wgi_data['year'].min()} to {wgi_data['year'].max()}")
             
             # Filter for target countries
-            filtered_data = wgi_data[wgi_data[country_col].isin(self.target_countries)].copy()
+            filtered_data = wgi_data[wgi_data['code'].isin(self.target_countries)].copy()
             print(f"  ✅ Filtered to {len(filtered_data)} rows for target countries")
             
-            # Select relevant columns
-            selected_cols = [country_col, year_col] + list(indicator_cols.values())
-            processed_data = filtered_data[selected_cols].copy()
+            if len(filtered_data) == 0:
+                print("  ⚠️  No data found for target countries. Checking available countries...")
+                available_countries = wgi_data['code'].unique()
+                print(f"  🌍 Available countries: {len(available_countries)}")
+                print(f"  📋 Sample: {available_countries[:20]}")
+                
+                # Check if we need to map country names
+                if 'countryname' in wgi_data.columns:
+                    print("  🔍 Checking country names...")
+                    country_names = wgi_data['countryname'].unique()
+                    print(f"  📋 Sample country names: {country_names[:20]}")
+                
+                return None
+            
+            # Pivot the data to wide format (one row per country-year)
+            print("  🔄 Pivoting data to wide format...")
+            pivoted_data = filtered_data.pivot_table(
+                index=['code', 'year'],
+                columns='indicator',
+                values='estimate',
+                aggfunc='first'
+            ).reset_index()
             
             # Rename columns for consistency
-            processed_data.rename(columns={
-                country_col: 'iso3c',
-                year_col: 'year'
-            }, inplace=True)
+            pivoted_data.rename(columns={'code': 'iso3c'}, inplace=True)
             
-            # Rename indicator columns
-            for code, col in indicator_cols.items():
-                processed_data.rename(columns={col: f'wgi_{code}'}, inplace=True)
+            # Add WGI prefix to indicator columns
+            indicator_cols = [col for col in pivoted_data.columns if col in self.indicators.keys()]
+            for col in indicator_cols:
+                pivoted_data.rename(columns={col: f'wgi_{col}'}, inplace=True)
             
-            print(f"  ✅ Processed WGI data shape: {processed_data.shape}")
-            print(f"  📋 Final columns: {list(processed_data.columns)}")
+            print(f"  ✅ Pivoted WGI data shape: {pivoted_data.shape}")
+            print(f"  📋 Final columns: {list(pivoted_data.columns)}")
+            print(f"  🌍 Countries: {pivoted_data['iso3c'].nunique()}")
+            print(f"  📅 Years: {pivoted_data['year'].min()} to {pivoted_data['year'].max()}")
             
-            return processed_data
+            return pivoted_data
             
         except Exception as e:
             print(f"  ❌ Error processing WGI data: {e}")
+            import traceback
+            traceback.print_exc()
             return None
     
     def create_monthly_wgi_panel(self, wgi_data):

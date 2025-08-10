@@ -15,13 +15,13 @@ class WGICleaner:
         
         # Target countries (73 countries from bond yield data)
         self.target_countries = [
-            'USA', 'DEU', 'JPN', 'GBR', 'FRA', 'ITA', 'CAN', 'AUS', 'ESP', 'NLD', 
-            'BEL', 'AUT', 'CHE', 'SWE', 'NOR', 'DNK', 'FIN', 'IRL', 'PRT', 'GRC', 
-            'POL', 'CZE', 'HUN', 'SVK', 'SVN', 'EST', 'LVA', 'LTU', 'BGR', 'ROU', 
-            'HRV', 'CYP', 'MLT', 'LUX', 'ISL', 'RUS', 'UKR', 'MEX', 'KOR', 'CHN', 
-            'IND', 'IDN', 'MYS', 'THA', 'PHL', 'VNM', 'SGP', 'HKG', 'TWN', 'TUR', 
-            'ISR', 'SAU', 'ARE', 'QAT', 'KWT', 'EGY', 'MAR', 'NGA', 'KEN', 'GHA', 
-            'ETH', 'ZAF', 'BRA', 'ARG', 'CHL', 'COL', 'PER', 'URY', 'NZL'
+             'ARG', 'ARM', 'AUS', 'AUT', 'BGD', 'BEL', 'BWA', 'BRA', 'BGR', 'CAN',
+            'CHL', 'CHN', 'CIV', 'COL', 'HRV', 'CYP', 'CZE', 'DNK', 'EGY', 'FIN',
+            'FRA', 'DEU', 'GRC', 'HKG', 'HUN', 'ISL', 'IND', 'IDN', 'IRL', 'ISR',
+            'ITA', 'JPN', 'KEN', 'KOR', 'LKA', 'LVA', 'LTU', 'LUX', 'MYS', 'MLT',
+            'MEX', 'NAM', 'NLD', 'NGA', 'NOR', 'NZL', 'PAK', 'PER', 'PHL', 'POL',
+            'PRT', 'QAT', 'ROU', 'RUS', 'SRB', 'SGP', 'SVK', 'SVN', 'ZAF', 'ESP',
+            'SWE', 'CHE', 'TWN', 'THA', 'TUR', 'UGA', 'GBR', 'USA', 'VNM', 'ZMB'
         ]
         
         # WGI indicators we want
