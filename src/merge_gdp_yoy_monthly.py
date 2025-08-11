@@ -43,6 +43,17 @@ def process_single_file(file_path: str) -> pd.DataFrame:
         "LastUpdate": "last_update",
     })
 
+    # Handle Finland: convert Monthly GDP YoY to GDP Annual Growth Rate
+    finland_mask = df["country"].str.lower().str.contains("finland", na=False)
+    if finland_mask.any():
+        # For Finland, convert Monthly GDP YoY to Annual Growth Rate
+        # Monthly YoY values can be converted to annual by taking the 12-month average
+        finland_data = df[finland_mask].copy()
+        finland_data["category"] = "GDP Annual Growth Rate"
+        # Replace the original Finland rows with converted ones
+        df = df[~finland_mask].copy()
+        df = pd.concat([df, finland_data], ignore_index=True)
+
     # Keep only GDP Annual Growth Rate rows
     df = df[df["category"].str.lower() == "gdp annual growth rate".lower()].copy()
 
