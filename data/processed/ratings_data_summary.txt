@@ -1,0 +1,100 @@
+RATINGS DATA PROCESSING SUMMARY
+================================
+
+Data Source: Individual CSV files for each country in data/external/Data/Control data/ratings/
+Output: data/processed/ratings_monthly_panel.csv
+
+PROCESSING METHODOLOGY:
+======================
+
+1. Date Range: 1980-01-01 to 2025-12-31 (monthly frequency)
+2. Countries: 66 countries processed
+3. Rating Agencies: Fitch, S&P, DBRS, Moody's
+4. Country Codes: Three-letter ISO codes used instead of country names
+
+DATA STRUCTURE:
+===============
+
+The output file contains the following columns:
+- Date: Monthly date (first day of each month)
+- Country: Three-letter ISO country code (e.g., ARG, USA, DEU)
+- Rating_Fitch: Fitch rating (forward-filled)
+- Outlook_Fitch: Fitch outlook (forward-filled)
+- Rating_S&P: S&P rating (forward-filled)
+- Outlook_S&P: S&P outlook (forward-filled)
+- Rating_DBRS: DBRS rating (forward-filled)
+- Outlook_DBRS: DBRS outlook (forward-filled)
+- Rating_Moody's: Moody's rating (forward-filled)
+- Outlook_Moody's: Moody's outlook (forward-filled)
+
+FORWARD-FILLING LOGIC:
+======================
+
+1. Ratings are assigned to the month in which they were issued
+2. Each rating remains constant until the next rating update from the same agency
+3. Missing values indicate no rating from that agency for that period
+4. Multiple agencies can have different ratings for the same country at the same time
+
+EXAMPLE PATTERNS:
+================
+
+Country A (Argentina - ARG):
+- 1980-1985: No ratings (missing values)
+- 1985-11: First rating from Moody's (Ba3, Stable)
+- 1985-12 to 1987-12: Ba3 rating continues (forward-filled)
+- 1987-12: New rating from Moody's (B2, Negative)
+- 1987-12 to next update: B2 rating continues
+
+Country B (Germany - DEU):
+- 1980-1986: No ratings (missing values)
+- 1986-02: First rating from Moody's (Aaa, Stable)
+- 1986-02 to 2012-07: Aaa rating continues
+- 2012-07: Rating update (Aaa, Negative)
+- 2012-07 to 2014-02: Aaa rating continues with Negative outlook
+
+Country C (United States - USA):
+- 2025-01: Multiple agency ratings
+  * Fitch: AA+ with Stable outlook
+  * S&P: AA+ with Stable outlook
+  * DBRS: AAA with Stable outlook
+  * Moody's: Aaa with Negative outlook
+
+DATA QUALITY:
+=============
+
+- Total observations: 36,533 rows
+- Countries with ratings: 66
+- Date range: 1980-01-01 to 2025-12-01
+- Missing data properly handled (NaN values for periods without ratings)
+- All country names converted to standard three-letter ISO codes
+
+INTEGRATION NOTES:
+=================
+
+This monthly panel dataset can be merged with other economic data using:
+- Date column for temporal alignment
+- Country column (ISO codes) for cross-sectional alignment
+
+The forward-filling ensures that ratings remain constant between updates, which is the standard approach for credit rating analysis.
+
+ISO CODE MAPPING:
+================
+
+Key country mappings:
+- Argentina: ARG
+- Brazil: BRA
+- China: CHN
+- Germany: DEU
+- France: FRA
+- Italy: ITA
+- Japan: JPN
+- United Kingdom: GBR
+- United States: USA
+- South Korea: KOR
+- India: IND (if present)
+- Russia: RUS
+- Turkey: TUR
+- South Africa: ZAF
+- Mexico: MEX
+- Canada: CAN
+- Australia: AUS (if present) 
