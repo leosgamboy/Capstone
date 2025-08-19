@@ -1,0 +1,28 @@
+ADVANCED REAL YIELD DATA ANALYSIS REPORT
+============================================================
+
+Generated on: 2025-07-29 20:42:43.819718
+
+DATASET OVERVIEW:
+--------------------
+Total records: 554,990
+Date range: 1800-01-01 00:00:00 to 2025-07-22 00:00:00
+Countries: 73
+Time span: 225 years
+
+KEY FINDINGS:
+---------------
+• Global average yield: 5.79%
+• Global yield volatility: 4.29%
+• Highest yielding region: Africa (14.23%)
+• Lowest yielding region: Middle East (2.51%)
+• Oldest data: 1800 (1800 years ago)
+• Most comprehensive country: United Kingdom
+
+ANALYSIS COMPLETED:
+--------------------
+✅ Advanced visualizations with real historical trends
+✅ Time series analysis on actual market movements
+✅ Forecasting models using real yield patterns
+✅ Correlation analysis between real country yields
+✅ Historical events impact studies
