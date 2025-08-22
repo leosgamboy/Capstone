@@ -1,0 +1,147 @@
+[
+  {
+    "fold": 0,
+    "p_imputer": "artifacts/dml_pooled/fold0_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold0_scaler.pkl"
+  },
+  {
+    "fold": 1,
+    "p_imputer": "artifacts/dml_pooled/fold1_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold1_scaler.pkl"
+  },
+  {
+    "fold": 2,
+    "p_imputer": "artifacts/dml_pooled/fold2_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold2_scaler.pkl"
+  },
+  {
+    "fold": 3,
+    "p_imputer": "artifacts/dml_pooled/fold3_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold3_scaler.pkl"
+  },
+  {
+    "fold": 4,
+    "p_imputer": "artifacts/dml_pooled/fold4_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold4_scaler.pkl"
+  },
+  {
+    "fold": 5,
+    "p_imputer": "artifacts/dml_pooled/fold5_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold5_scaler.pkl"
+  },
+  {
+    "fold": 6,
+    "p_imputer": "artifacts/dml_pooled/fold6_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold6_scaler.pkl"
+  },
+  {
+    "fold": 7,
+    "p_imputer": "artifacts/dml_pooled/fold7_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold7_scaler.pkl"
+  },
+  {
+    "fold": 8,
+    "p_imputer": "artifacts/dml_pooled/fold8_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold8_scaler.pkl"
+  },
+  {
+    "fold": 9,
+    "p_imputer": "artifacts/dml_pooled/fold9_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold9_scaler.pkl"
+  },
+  {
+    "fold": 10,
+    "p_imputer": "artifacts/dml_pooled/fold10_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold10_scaler.pkl"
+  },
+  {
+    "fold": 11,
+    "p_imputer": "artifacts/dml_pooled/fold11_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold11_scaler.pkl"
+  },
+  {
+    "fold": 12,
+    "p_imputer": "artifacts/dml_pooled/fold12_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold12_scaler.pkl"
+  },
+  {
+    "fold": 13,
+    "p_imputer": "artifacts/dml_pooled/fold13_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold13_scaler.pkl"
+  },
+  {
+    "fold": 14,
+    "p_imputer": "artifacts/dml_pooled/fold14_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold14_scaler.pkl"
+  },
+  {
+    "fold": 15,
+    "p_imputer": "artifacts/dml_pooled/fold15_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold15_scaler.pkl"
+  },
+  {
+    "fold": 16,
+    "p_imputer": "artifacts/dml_pooled/fold16_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold16_scaler.pkl"
+  },
+  {
+    "fold": 17,
+    "p_imputer": "artifacts/dml_pooled/fold17_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold17_scaler.pkl"
+  },
+  {
+    "fold": 18,
+    "p_imputer": "artifacts/dml_pooled/fold18_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold18_scaler.pkl"
+  },
+  {
+    "fold": 19,
+    "p_imputer": "artifacts/dml_pooled/fold19_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold19_scaler.pkl"
+  },
+  {
+    "fold": 20,
+    "p_imputer": "artifacts/dml_pooled/fold20_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold20_scaler.pkl"
+  },
+  {
+    "fold": 21,
+    "p_imputer": "artifacts/dml_pooled/fold21_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold21_scaler.pkl"
+  },
+  {
+    "fold": 22,
+    "p_imputer": "artifacts/dml_pooled/fold22_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold22_scaler.pkl"
+  },
+  {
+    "fold": 23,
+    "p_imputer": "artifacts/dml_pooled/fold23_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold23_scaler.pkl"
+  },
+  {
+    "fold": 24,
+    "p_imputer": "artifacts/dml_pooled/fold24_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold24_scaler.pkl"
+  },
+  {
+    "fold": 25,
+    "p_imputer": "artifacts/dml_pooled/fold25_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold25_scaler.pkl"
+  },
+  {
+    "fold": 26,
+    "p_imputer": "artifacts/dml_pooled/fold26_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold26_scaler.pkl"
+  },
+  {
+    "fold": 27,
+    "p_imputer": "artifacts/dml_pooled/fold27_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold27_scaler.pkl"
+  },
+  {
+    "fold": 28,
+    "p_imputer": "artifacts/dml_pooled/fold28_imputer.pkl",
+    "p_scaler": "artifacts/dml_pooled/fold28_scaler.pkl"
+  }
+]
