@@ -1,0 +1,12 @@
+,"|corr( X_res , T_res )|"
+cpi_yoy_lag1,0.07146839527326374
+extreme_change_flag,0.0386631184973179
+debt_to_gdp_lag1,0.036787453269675405
+gdp_annual_growth_rate_lag1,0.026290700887703522
+ln_gross_gdp_lag1,0.021592813513543353
+wgi_ge_lag1,0.02018175103615414
+mineral_rent_lag1,0.020012689716712617
+current_account_balance_lag1,0.02000997668099246
+deficit_to_gdp_lag1,0.010534417743603792
+ln_population_lag1,0.006707113746530879
+ln_gdp_per_capita_lag1,0.0003853308428986247
