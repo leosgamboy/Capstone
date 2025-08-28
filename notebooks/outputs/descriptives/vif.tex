@@ -1,0 +1,25 @@
+\begin{table}[!htbp]
+\centering
+\begin{threeparttable}
+\resizebox{\textwidth}{!}{%
+\begin{tabular @{} }{@{}lrrr}
+\toprule
+Variable & VIF & Tolerance & R2 \\
+\midrule
+wgi\_cc & 1.980000 & 0.510000 & 0.490000 \\
+vulnerability\_lag1 & 1.980000 & 0.510000 & 0.490000 \\
+current\_account\_balance & 1.090000 & 0.920000 & 0.080000 \\
+cpi\_yoy & 1.070000 & 0.930000 & 0.070000 \\
+gdp\_annual\_growth\_rate\_lag1 & 1.070000 & 0.940000 & 0.060000 \\
+debt\_to\_gdp\_lag1 & 1.040000 & 0.960000 & 0.040000 \\
+mineral\_rent & 1.020000 & 0.980000 & 0.020000 \\
+population &  &  &  \\
+population &  &  &  \\
+\bottomrule
+\end{tabular}
+}
+\begin{tablenotes}[flushleft]\footnotesize\item VIF = 1/(1-R$^2$). Tolerance = 1/VIF. VIF > 10 often indicates severe multicollinearity.\end{tablenotes}
+\caption{Variance Inflation Factors (VIF) for selected predictors.}
+\label{tab:vif}
+\end{threeparttable}
+\end{table}
