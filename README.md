@@ -15,7 +15,3 @@ Data
 - ** Country
 
 
-3. Organize data files in the `data/` directory as described above.
-4. Use the provided scripts and notebooks in `src/` and `notebooks/` to run the pipeline.
-
-
