@@ -4,8 +4,7 @@
 This project's goal is to quantify how climate risks causally affect sovereign bond spreads and default risk.
 
 ### Stages
-1. **Forecasting Climate-Event Risk**: Data ingestion, feature engineering, and ML modeling to predict event risk and damage.
-2. **Causal ML Analysis on Sovereign Bonds**: Merging forecasts with financial data and applying causal inference methods to estimate effects.
+2. **Causal ML Analysis on Sovereign Bonds**: Merging climate vulnerability with sovereign bonds and confounding variables data and applying  a DML causal inference method to estimate effects.
 
 ## Main Data Sources
 Data 
